@@ -17,7 +17,7 @@ const Sidebar= ()=> {
                 <CDBSidebarContent className= "sidebar-content">
                     <CDBSidebarMenu>
                         <NavLink exact to="/user" style= {({ isActive })=> isActive ? activeStyle : undefined }>
-                            <CDBSidebarMenuItem icon="user">User</CDBSidebarMenuItem>
+                            <CDBSidebarMenuItem icon= "user">User</CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink exact to= "/dashboard" style= {({ isActive })=> isActive ? activeStyle : undefined }>
                             <CDBSidebarMenuItem icon= "list">Dashboard</CDBSidebarMenuItem>
