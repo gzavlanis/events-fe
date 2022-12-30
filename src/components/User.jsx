@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "reactstrap";
+import { Row, Col, Container } from "reactstrap";
 import Sidebar from "./Sidebar";
 
 export default class User extends React.Component{
@@ -10,7 +10,9 @@ export default class User extends React.Component{
                     <Sidebar/>
                 </Col>
                 <Col className= "col-9">
+                    <Container fluid>
 
+                    </Container>
                 </Col>
             </Row>
         );
