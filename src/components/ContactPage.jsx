@@ -11,7 +11,7 @@ export default class Contact extends React.Component{
                 </Col>
                 <Col className= "col-9">
                     <h3 className= "text-center">Contact with the programmers</h3>
-                    <Form>
+                    <Form className= "container">
                         <FormGroup>
                             <Label for= "name">Name</Label>
                             <Input className= "shadow" type= "text" name= "name" id= "name" placeholder= "Enter your name"/>

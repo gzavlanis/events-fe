@@ -28,6 +28,9 @@ const Sidebar= ()=> {
                         <NavLink exact to= "/settings" style= {({ isActive })=> isActive ? activeStyle : undefined }>
                             <CDBSidebarMenuItem icon= "wrench">Settings</CDBSidebarMenuItem>
                         </NavLink>
+                        <NavLink exact to= "/about" style= {({ isActive })=> isActive ? activeStyle : undefined }>
+                            <CDBSidebarMenuItem icon= "info">About</CDBSidebarMenuItem>
+                        </NavLink>
                         <NavLink exact to= "/contact" style= {({ isActive })=> isActive ? activeStyle : undefined }>
                             <CDBSidebarMenuItem icon= "envelope">Contact</CDBSidebarMenuItem>
                         </NavLink>

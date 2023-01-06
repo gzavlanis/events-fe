@@ -3,7 +3,7 @@ import { Container } from 'reactstrap';
    
 export default function Clock() {
     let options = {
-        width: "238px",
+        width: "245px",
         border: "true",
         borderColor: "lightgrey",
         baseColor: "lightGrey",
