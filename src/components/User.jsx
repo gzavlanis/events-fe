@@ -13,7 +13,7 @@ export default function User(args){
             <Col className= "col-9 mt-3">
                 <Nav pills className= "shadow bg-light rounded shadow">
                     <NavItem>
-                        <NavLink className= "nav-link" exact to= "/">Edit Profile</NavLink>
+                        <NavLink className= "nav-link" exact to= "/edit">Edit Profile</NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink className= "nav-link" exact to= "/auth">Logout</NavLink>
@@ -22,7 +22,7 @@ export default function User(args){
                 <Card className= "mt-3 rounded shadow">
                     <CardHeader className= "mx-1 row border-0">
                         <Col className= "col-3">
-                            <img src= {user} className= 'rounded-circle shadow' alt= "profile picture" height= "200" width= "200"></img>
+                            <img src= {user} className= 'rounded-circle shadow' alt= "profile" height= "200" width= "200"/>
                         </Col>
                         <Col className= "col-9">
                             <h3 className= 'text-center'>User's name</h3>

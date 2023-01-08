@@ -6,6 +6,7 @@ import Contact from './components/ContactPage';
 import User from './components/User';
 import Login from './components/login_signin';
 import About from './components/About';
+import EditProfile from './components/EditProfile';
 
 export default class App extends React.Component{
   render(){
@@ -18,6 +19,7 @@ export default class App extends React.Component{
             <Route exact path= "/user" element= {<User/>}/>
             <Route exact path= "/auth" element= {<Login/>}/>
             <Route exact path= "/about" element= {<About/>}/>
+            <Route exact path= "/edit" element= {<EditProfile/>}/>
         </Routes>
       </BrowserRouter>
     );
