@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard';
 import Contact from './components/ContactPage';
 import User from './components/User';
 import Login from './components/login_signin';
+import About from './components/About';
 
 export default class App extends React.Component{
   render(){
@@ -16,6 +17,7 @@ export default class App extends React.Component{
             <Route exact path= "/contact" element= {<Contact/>}/>
             <Route exact path= "/user" element= {<User/>}/>
             <Route exact path= "/auth" element= {<Login/>}/>
+            <Route exact path= "/about" element= {<About/>}/>
         </Routes>
       </BrowserRouter>
     );
