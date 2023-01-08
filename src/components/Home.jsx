@@ -15,7 +15,7 @@ export default class Home extends React.Component{
 
     render(){
         return(
-            <Row className= "w-100" style= {{backgroundColor: 'lightgrey'}}>
+            <Row className= "w-100" style= {{backgroundColor: 'lightgrey', height: "100vh"}}>
                 <Col className= "col-3">
                     <Sidebar/>
                 </Col>
