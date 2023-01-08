@@ -9,7 +9,7 @@ export default class Contact extends React.Component{
                 <Col className= "col-3">
                     <Sidebar/>
                 </Col>
-                <Col className= "col-9">
+                <Col className= "col-9 mt-2">
                     <h3 className= "text-center">Contact with the programmers</h3>
                     <Form className= "container">
                         <FormGroup>

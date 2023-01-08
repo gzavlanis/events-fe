@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Row, Col, Nav, NavItem, Card, CardHeader, CardBody, CardTitle } from "reactstrap";
+import { Row, Col, Nav, NavItem, Card, CardHeader, CardBody, CardTitle, Table } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import Sidebar from "./Sidebar";
+import user from "../user-picture.png";
 
 export default function User(args){
     return(
-        <Row className= "w-100" style= {{backgroundColor: "lightgrey"}}>
+        <Row className= "w-100" style= {{backgroundColor: "lightgrey", height: "100vh"}}>
             <Col className= "col-3">
                 <Sidebar/>
             </Col>
@@ -19,16 +20,33 @@ export default function User(args){
                     </NavItem>
                 </Nav>
                 <Card className= "mt-3 rounded shadow">
-                    <CardHeader className= "row">
+                    <CardHeader className= "mx-1 row border-0">
                         <Col className= "col-3">
-                            <img src= "" className= 'rounded' alt= "profile picture"></img>
+                            <img src= {user} className= 'rounded-circle shadow' alt= "profile picture" height= "200" width= "200"></img>
                         </Col>
                         <Col className= "col-9">
                             <h3 className= 'text-center'>User's name</h3>
+                            <h5 className= "mx-3 mt-2">You can select the "Edit profile" link above to edit your profile information.</h5>
                         </Col>
                     </CardHeader>
                     <CardBody>
-                        <CardTitle>User's information</CardTitle>
+                        <CardTitle>
+                            <h4 className= 'text-center'>User's information</h4>
+                        </CardTitle>
+                        <Table light color= "light" className= "mt-3">
+                            <thead>
+                                <th>Fullname</th>
+                                <th>Email</th>
+                                <th>Password</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Georgios Zavlanis</td>
+                                    <td>gzavlanis@gmail.com</td>
+                                    <td>********</td>
+                                </tr>
+                            </tbody>
+                        </Table>
                     </CardBody>
                 </Card>
             </Col>
