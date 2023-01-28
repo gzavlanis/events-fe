@@ -25,7 +25,7 @@ export default class Contact extends React.Component{
                             <Input className= "shadow" type= "textarea" name= "message" id= "message" placeholder= "Write your Message"/>
                         </FormGroup>
                         <FormGroup>
-                            <Label for= "file">Add files to help us uderstand</Label>
+                            <Label for= "file">Add files to help us understand</Label>
                             <Input className= "shadow" type= "file" name= "file" id= "file"/>
                             <FormText color= "dark">You can upload image files with shots from your screen, to help understand your issue.</FormText>
                         </FormGroup>

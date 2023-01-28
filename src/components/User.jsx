@@ -1,8 +1,10 @@
 import React from 'react';
-import { Row, Col, Nav, NavItem, Card, CardHeader, CardBody, CardTitle, Table } from "reactstrap";
+import { Row, Col, Nav, NavItem, Card, CardHeader, CardBody, CardTitle, Table, Button } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import user from "../user-picture.png";
+import { MdDelete } from "react-icons/md";
+import LineChart from './LineChart';
 
 export default function User(args){
     return(
@@ -18,15 +20,23 @@ export default function User(args){
                     <NavItem>
                         <NavLink className= "nav-link" exact to= "/auth">Logout</NavLink>
                     </NavItem>
+                    <NavItem>
+                        <NavLink className= "nav-link" exact to= "/dashboard">Your events</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <Button className = "btn-sm btn-danger mt-1 shadow mx-5">
+                            <MdDelete size = {18}/> Delete account
+                        </Button>
+                    </NavItem>
                 </Nav>
                 <Card className= "mt-3 rounded shadow">
                     <CardHeader className= "mx-1 row border-0">
                         <Col className= "col-3">
-                            <img src= {user} className= 'rounded-circle shadow' alt= "profile" height= "200" width= "200"/>
+                            <img src= {user} className= 'rounded-circle shadow' alt= "profile" height= "100" width= "100"/>
                         </Col>
                         <Col className= "col-9">
-                            <h3 className= 'text-center'>User's name</h3>
-                            <h5 className= "mx-3 mt-2">You can select the "Edit profile" link above to edit your profile information.</h5>
+                            <h3 className= 'text-center'>gzavlanis</h3>
+                            <h6 className= "mx-3 my-3">You can select the "Edit profile" link above to edit your profile information, or the delete button to permanently delete your data.</h6>
                         </Col>
                     </CardHeader>
                     <CardBody>
@@ -47,6 +57,14 @@ export default function User(args){
                                 </tr>
                             </tbody>
                         </Table>
+                    </CardBody>
+                </Card>
+                <Card className= "mt-3 rounded shadow mb-3">
+                    <CardHeader className= "mx-1 row border-0">
+                        <h5 className= 'text-center'>Your visits data</h5>
+                    </CardHeader>
+                    <CardBody>
+                        <LineChart/>
                     </CardBody>
                 </Card>
             </Col>

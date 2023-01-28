@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Button, Container, Form, FormGroup, Input, Label, FormText } from "reactstrap";
+import { BsCheckLg } from "react-icons/bs";
+import { BiExit } from "react-icons/bi";
 
 export default function EditProfile(props){
     return(
@@ -26,12 +28,12 @@ export default function EditProfile(props){
                             <Input className= "shadow" type= "file" name= "file" id= "file"/>
                             <FormText color= "dark">You can choose any image file format.</FormText>
                         </FormGroup>
-                        <div className= "d-grid gap-2 mt-3">
-                            <Button type= "submit" className= "btn btn-success w-50 shadow">Submit</Button>
-                        </div>
-                        <div className= "d-grid gap-2 mt-3">
-                            <NavLink exact to= "/user" className= "btn btn-danger w-50 shadow">Abort</NavLink>
-                        </div>
+                        <Button type= "button" className= "mt-2 btn btn-success shadow mx-2">
+                            <BsCheckLg size= {18}/> Sign in
+                        </Button>
+                        <NavLink exact to= "/user" className= "mt-2 btn btn-danger shadow mx-2">
+                            <BiExit size= {18}/> Abort
+                        </NavLink>
                     </div>
                 </Form>
             </Container>

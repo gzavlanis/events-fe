@@ -26,13 +26,13 @@ export default class Dashboard extends React.Component{
                     </Col>
                     <Col className= "col-9 mt-2" style= {{height: "100vh"}}>
                         <Row className= "mx-1">
-                            <Col className= "col col-sm rounded shadow bg-light mx-1 py-3 my-1">
+                            <Col className= "col-sm rounded shadow bg-light mx-1 py-3 my-1">
                                 <Clock/>
                             </Col>
-                            <Col className= "col col-sm rounded shadow bg-light py-2 mx-1 my-1">
+                            <Col className= "col-sm rounded shadow bg-light py-2 mx-1 my-1">
                                 <SimpleCalendar/>
                             </Col>
-                            <Col className= "col col-sm rounded shadow bg-light py-3 mx-1 my-1">
+                            <Col className= "col-sm rounded shadow bg-light py-3 mx-1 my-1">
                                 <WeatherApp/>
                             </Col>
                         </Row>

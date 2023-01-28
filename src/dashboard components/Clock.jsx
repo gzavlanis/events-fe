@@ -17,7 +17,7 @@ export default function Clock() {
     };
    
     return (
-        <Container className= 'text-center my-4 mx-2'>
+        <Container className= 'text-center my-4 mx-1'>
             <AnalogClock {...options}/>
         </Container>
     );
