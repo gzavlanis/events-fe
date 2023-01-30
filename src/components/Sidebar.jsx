@@ -39,7 +39,7 @@ const Sidebar= ()=> {
                 <CDBSidebarFooter className= "text-center">
                     <div className= "sidebar-btnwrapper" style= {{padding: '20px 5px,'}}>
                         <p>
-                            &#169;&ensp;2022 Georgios Zavlanis&ensp;
+                            &#169;&ensp;2023 Georgios Zavlanis&ensp;
                             <FaGlobe size= {15}/>&ensp;
                             <FaGithub size= {15}/>&ensp;
                         </p>

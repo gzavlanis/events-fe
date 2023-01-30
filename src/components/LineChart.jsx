@@ -4,11 +4,11 @@ import { Line } from "react-chartjs-2";
 
 export default function LineChart() {
   const data = {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    labels: ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"],
     datasets: [
       {
-        label: "Monthly logins",
-        data: [33, 53, 85, 41, 44, 65],
+        label: "Daily logins",
+        data: [33, 53, 85, 41, 44, 65, 0],
         fill: true,
         backgroundColor: "rgba(75,192,192,0.2)",
         borderColor: "rgba(75,192,192,1)"
@@ -17,8 +17,8 @@ export default function LineChart() {
   };
 
   return (
-    <div className= "text-center">
-      <Line height = {70} data = {data}/>
+    <div className = "text-center">
+      <Line height = {"170vh"} data = {data}/>
     </div>
   );
 }

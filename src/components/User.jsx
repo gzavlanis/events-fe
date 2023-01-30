@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar";
 import user from "../user-picture.png";
 import { MdDelete } from "react-icons/md";
 import LineChart from './LineChart';
+import DonoughtChart from './DonoughtChart';
 
 export default function User(args){
     return(
@@ -59,12 +60,17 @@ export default function User(args){
                         </Table>
                     </CardBody>
                 </Card>
-                <Card className= "mt-3 rounded shadow mb-3">
+                <Card className= "mt-3 rounded shadow mb-4">
                     <CardHeader className= "mx-1 row border-0">
-                        <h5 className= 'text-center'>Your visits data</h5>
+                        <h5 className= 'text-center'>Your data in the application</h5>
                     </CardHeader>
-                    <CardBody>
-                        <LineChart/>
+                    <CardBody className= 'row'>
+                        <Col className= 'col-sm'>
+                            <LineChart/>
+                        </Col>
+                        <Col className= 'col-sm'>
+                            <DonoughtChart/>
+                        </Col>
                     </CardBody>
                 </Card>
             </Col>

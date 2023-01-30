@@ -7,6 +7,7 @@ import User from './components/User';
 import Login from './components/login_signin';
 import About from './components/About';
 import EditProfile from './components/EditProfile';
+import 'react-calendar/dist/Calendar.css';
 
 export default class App extends React.Component{
   render(){

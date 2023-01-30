@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
 import NewEventForm from "./NewEventForm";
+import { BsPlusCircleFill } from "react-icons/bs";
 
 export default class NewEventModal extends React.Component{
     state= {modal: false};
@@ -15,7 +16,9 @@ export default class NewEventModal extends React.Component{
         if (create){
             title= "Create a new event";
             button= (
-                <Button color= "primary" className= "float-left rounded shadow mx-2" onClick= {this.toggle} style= {{minWidth: "200px" }}>Create New</Button>
+                <Button color= "primary" className= "float-left rounded shadow" onClick= {this.toggle}>
+                    <BsPlusCircleFill size = {18}/> Create New
+                </Button>
             );
         }
         return(
