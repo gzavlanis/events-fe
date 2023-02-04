@@ -7,6 +7,7 @@ import User from './components/User';
 import Login from './components/login_signin';
 import About from './components/About';
 import EditProfile from './components/EditProfile';
+import Welcome from './components/Welcome';
 import 'react-calendar/dist/Calendar.css';
 
 export default class App extends React.Component{
@@ -14,13 +15,14 @@ export default class App extends React.Component{
     return (
       <BrowserRouter>
         <Routes>
-            <Route exact path= "/" element= {<Home/>}/>
+            <Route exact path= "/home" element= {<Home/>}/>
             <Route exact path= "/dashboard" element= {<Dashboard/>}/>
             <Route exact path= "/contact" element= {<Contact/>}/>
             <Route exact path= "/user" element= {<User/>}/>
             <Route exact path= "/auth" element= {<Login/>}/>
             <Route exact path= "/about" element= {<About/>}/>
             <Route exact path= "/edit" element= {<EditProfile/>}/>
+            <Route exact path= "/" element= {<Welcome/>}/>
         </Routes>
       </BrowserRouter>
     );
