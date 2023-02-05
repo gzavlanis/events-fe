@@ -22,7 +22,7 @@ const Sidebar= ()=> {
                         <NavLink exact to= "/dashboard" style= {({ isActive })=> isActive ? activeStyle : undefined }>
                             <CDBSidebarMenuItem icon= "list">Dashboard</CDBSidebarMenuItem>
                         </NavLink>
-                        <NavLink exact to= "/" style= {({ isActive })=> isActive ? activeStyle : undefined }>
+                        <NavLink exact to= "/calendar" style= {({ isActive })=> isActive ? activeStyle : undefined }>
                             <CDBSidebarMenuItem icon= "calendar">Calendar</CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink exact to= "/about" style= {({ isActive })=> isActive ? activeStyle : undefined }>

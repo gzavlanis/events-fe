@@ -23,6 +23,7 @@ export default class App extends React.Component{
             <Route exact path= "/about" element= {<About/>}/>
             <Route exact path= "/edit" element= {<EditProfile/>}/>
             <Route exact path= "/" element= {<Welcome/>}/>
+            <Route exact path= "/calendar" element= {<Home/>}/>
         </Routes>
       </BrowserRouter>
     );

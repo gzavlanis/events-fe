@@ -6,8 +6,9 @@ import background from "../background.jpg";
 
 export default class Welcome extends React.Component{
     style = {
-        backgroundImage: `url(${background})`, height: "100vh", backgroundSize: "cover",
-    }
+        backgroundImage: `url(${background})`, backgroundSize: "cover",
+    };
+    
     render() {
         return(
             <div style= {this.style}>

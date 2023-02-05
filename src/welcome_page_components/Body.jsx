@@ -1,6 +1,7 @@
 import React from "react";
-import { Container, Card, CardBody, CardHeader, CardTitle, CardSubtitle, Row } from "reactstrap";
-
+import { Container, Card, CardBody, CardHeader, CardTitle, CardSubtitle, Row, InputGroup, Input, Button } from "reactstrap";
+import dashboard from '../dashboard.png';
+import user from '../user.png';
 export default class Body extends React.Component {
   render() {
     return (
@@ -21,8 +22,8 @@ export default class Body extends React.Component {
           </CardBody>
         </Card>
         <Row>
-          <Card className="mx-3 col-sm-7 border-0 shadow-lg rounded my-5">
-            <img alt="screenshot" src=""></img>
+          <Card className="mx-3 col-sm-6 border-0 shadow-lg rounded my-5">
+            <img className = "py-3" alt="screenshot" src= {dashboard}></img>
             <CardBody>
               <CardTitle tag="h5" className="text-center">
                 Simple design
@@ -34,8 +35,8 @@ export default class Body extends React.Component {
               </CardSubtitle>
             </CardBody>
           </Card>
-          <Card className="mx-3 col-sm-4 border-0 shadow-lg rounded my-5">
-            <img alt="screenshot" src=""></img>
+          <Card className="mx-3 col-sm-5 border-0 shadow-lg rounded my-5">
+            <img className = "py-3" alt="screenshot" src= {user}></img>
             <CardBody>
               <CardTitle tag="h5" className="text-center">
                 Create your own event categories
@@ -46,10 +47,27 @@ export default class Body extends React.Component {
             </CardBody>
           </Card>
         </Row>
-        <Container>
+        <Row className= "mb-3">
+          <Card className="col-sm-7 border-0 shadow-lg rounded my-1">
+            <img className = "py-3" alt="screenshot" src= {user}></img>
+            <CardBody>
+              <CardTitle tag="h5" className="text-center">
+                Create your own event categories
+              </CardTitle>
+              <CardSubtitle tag="h6" className="text-muted pt-3">
+                You can create as many event categories as you wish and give them a different color you like.
+              </CardSubtitle>
+            </CardBody>
+          </Card>
+          <Container className= "col-sm-4">
             <h4 className= "text-secondary">Enter your email to contact with you!</h4>
             <h6>We will be very happy if you try the development version of our app!</h6>
-        </Container>
+            <InputGroup className= "border-0 shadow">
+              <Input type = "email" className= "border-0"/>
+              <Button className = "btn btn-secondary">Submit</Button>
+            </InputGroup>
+          </Container>
+        </Row>
       </Container>
     );
   }
