@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Card, CardBody, CardHeader, CardTitle, CardSubtitle, Row, InputGroup, Input, Button } from "reactstrap";
 import dashboard from '../dashboard.png';
 import user from '../user.png';
+import calendar from '../calendar.png';
 export default class Body extends React.Component {
   render() {
     return (
@@ -49,13 +50,13 @@ export default class Body extends React.Component {
         </Row>
         <Row className= "mb-3">
           <Card className="col-sm-7 border-0 shadow-lg rounded my-1">
-            <img className = "py-3" alt="screenshot" src= {user}></img>
+            <img className = "py-3" alt="screenshot" src= {calendar}></img>
             <CardBody>
               <CardTitle tag="h5" className="text-center">
-                Create your own event categories
+                See your month events in one place!
               </CardTitle>
               <CardSubtitle tag="h6" className="text-muted pt-3">
-                You can create as many event categories as you wish and give them a different color you like.
+                By pressing "Calendar", you can view your personal event calendar and modify your events
               </CardSubtitle>
             </CardBody>
           </Card>

@@ -6,14 +6,17 @@ import background from "../background.jpg";
 
 export default class Welcome extends React.Component{
     style = {
-        backgroundImage: `url(${background})`, backgroundSize: "cover",
+        backgroundImage: `url(${background})`, backgroundSize: "cover", backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed", backgroundPosition: "center"
     };
     
     render() {
         return(
             <div style= {this.style}>
                 <Header/>
-                <Body/>
+                <div style =  {{paddingTop: "13vh"}}>
+                    <Body/>
+                </div>
                 <Footer/>
             </div>
         );
