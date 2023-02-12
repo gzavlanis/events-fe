@@ -1,21 +1,26 @@
-import React, {useEffect, useState } from "react";
+import React from "react";
 import { Nav, Navbar, NavbarBrand, NavItem } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import logo from "../logo.svg";
 
-export default function Header() {
-    const style = {position: "fixed", top: "0", width: "100vw", zIndex: "999"};
-    const [small, setSmall] = useState(false);
-
-    useEffect(() => {
-    if (typeof window !== "undefined") {
-        window.addEventListener("scroll", () =>
-            setSmall(window.pageYOffset > 200));
+export default class Header extends React.Component {
+    state = {color: "", className: ""};
+    style = { position: "fixed", zIndex: "999", width: "100%" };
+    listenScrollEvent = () => {
+        if (window.scrollY > 50) { 
+            this.setState({ color: "light", className: "shadow" }); 
         }
-    }, []);
+        else { 
+            this.setState({ color: "", className: "" }); 
+        }
+    };
+    componentDidMount() {
+        window.addEventListener("scroll", this.listenScrollEvent);
+    };
 
+    render() {
         return(
-            <Navbar className= {`header ${ small ? "small" : "" }`} style = {style}>
+            <Navbar style = {this.style} color = {this.state.color} className = {this.state.className}>
                 <NavbarBrand href = "/" className= "text-secondary">
                     <img src= {logo} height= "50" width= "70" alt= "logo"></img>
                     AGENDA
@@ -28,7 +33,7 @@ export default function Header() {
                     </NavItem>
                     <NavItem className= "mx-2">
                         <NavLink exact to = '/auth' className = "btn shadow border-primary text-primary">
-                            <h6>Sign up/Sign in</h6>
+                            <h6>Sign up / Sign in</h6>
                         </NavLink>
                     </NavItem>
                     <NavItem className= "mx-2">
@@ -40,3 +45,4 @@ export default function Header() {
             </Navbar>
         );
     }
+}

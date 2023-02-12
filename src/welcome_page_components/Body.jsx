@@ -4,9 +4,11 @@ import dashboard from '../dashboard.png';
 import user from '../user.png';
 import calendar from '../calendar.png';
 export default class Body extends React.Component {
+  style = { paddingTop: "6%", paddingBottom: "1%" };
+  
   render() {
     return (
-      <Container>
+      <Container style = {this.style}>
         <Card className="border-0 shadow-lg rounded">
           <CardHeader className="border-0">
             <h4 className="mt-2 text-center text-secondary">
@@ -63,6 +65,8 @@ export default class Body extends React.Component {
           <Container className= "col-sm-4">
             <h4 className= "text-secondary">Enter your email to contact with you!</h4>
             <h6>We will be very happy if you try the development version of our app!</h6>
+            <h6 className= "my-4">You can also stay up to date for new features and releases, by using your email
+            to sign up in our newsletter.</h6>
             <InputGroup className= "border-0 shadow">
               <Input type = "email" className= "border-0"/>
               <Button className = "btn btn-secondary">Submit</Button>

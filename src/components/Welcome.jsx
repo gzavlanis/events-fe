@@ -14,9 +14,7 @@ export default class Welcome extends React.Component{
         return(
             <div style= {this.style}>
                 <Header/>
-                <div style =  {{paddingTop: "13vh"}}>
-                    <Body/>
-                </div>
+                <Body/>
                 <Footer/>
             </div>
         );
