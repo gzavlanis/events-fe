@@ -34,7 +34,6 @@ export default function Footer() {
                 <MDBCol md='5' start>
                   <MDBInput contrast type='email' className='mb-4' />
                 </MDBCol>
-  
                 <MDBCol size="auto">
                   <MDBBtn outline color='light' type='submit' className='mb-4'>
                     Subscribe
@@ -63,4 +62,4 @@ export default function Footer() {
         </div>
       </MDBFooter>
     );
-  }
+}
